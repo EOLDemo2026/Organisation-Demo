@@ -1,7 +1,3 @@
-package com.eoldemo.transitive;
-
-public class Greeter {
-    public static String greet(String name) {
-        return "Hello, " + name + " from TransitiveApp!";
-    }
-}
+*** Begin Patch
+*** Delete File: transitive-app/src/main/java/com/eoldemo/transitive/Greeter.java
+*** End Patch

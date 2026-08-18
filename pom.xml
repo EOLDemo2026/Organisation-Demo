@@ -5,9 +5,14 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>com.eoldemo</groupId>
-  <artifactId>organisation-demo-spring5</artifactId>
+  <artifactId>organisation-demo</artifactId>
   <version>0.1.0</version>
-  <packaging>jar</packaging>
+  <packaging>pom</packaging>
+
+  <modules>
+    <module>transitive-app</module>
+    <module>organisation-demo-spring5</module>
+  </modules>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -16,77 +21,5 @@
     <spring.version>5.3.29</spring.version>
     <spring.security.version>5.7.9</spring.security.version>
   </properties>
-
-  <dependencies>
-    <!-- Spring Context (Spring Framework 5.x) -->
-    <dependency>
-      <groupId>org.springframework</groupId>
-      <artifactId>spring-context</artifactId>
-      <version>${spring.version}</version>
-    </dependency>
-
-    <!-- Spring Security (compatible with Spring 5 / Java 1.8) -->
-    <dependency>
-      <groupId>org.springframework.security</groupId>
-      <artifactId>spring-security-core</artifactId>
-      <version>${spring.security.version}</version>
-    </dependency>
-    <dependency>
-      <groupId>org.springframework.security</groupId>
-      <artifactId>spring-security-config</artifactId>
-      <version>${spring.security.version}</version>
-    </dependency>
-    <dependency>
-      <groupId>org.springframework.security</groupId>
-      <artifactId>spring-security-web</artifactId>
-      <version>${spring.security.version}</version>
-    </dependency>
-
-    <!-- Apache Commons libraries (legacy 2.x / 1.x for compatibility with your request) -->
-    <dependency>
-      <groupId>commons-lang</groupId>
-      <artifactId>commons-lang</artifactId>
-      <version>2.6</version>
-    </dependency>
-    <dependency>
-      <groupId>org.apache.commons</groupId>
-      <artifactId>commons-configuration</artifactId>
-      <version>1.10</version>
-    </dependency>
-
-    <!-- Logging (simple) -->
-    <dependency>
-      <groupId>org.slf4j</groupId>
-      <artifactId>slf4j-simple</artifactId>
-      <version>1.7.36</version>
-    </dependency>
-
-    <!-- JUnit 4 for tests -->
-    <dependency>
-      <groupId>junit</groupId>
-      <artifactId>junit</artifactId>
-      <version>4.13.2</version>
-      <scope>test</scope>
-    </dependency>
-  </dependencies>
-
-  <build>
-    <plugins>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-compiler-plugin</artifactId>
-        <version>3.8.1</version>
-        <configuration>
-          <source>${maven.compiler.source}</source>
-          <target>${maven.compiler.target}</target>
-        </configuration>
-      </plugin>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-jar-plugin</artifactId>
-        <version>3.2.2</version>
-      </plugin>
-    </plugins>
-  </build>
 
 </project>

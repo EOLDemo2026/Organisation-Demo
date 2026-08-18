@@ -10,7 +10,6 @@
   <packaging>pom</packaging>
 
   <modules>
-    <module>transitive-app</module>
     <module>organisation-demo-spring5</module>
   </modules>
 
